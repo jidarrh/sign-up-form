@@ -1,36 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --red: hsl(0, 100%, 74%);
+    --blue: hsl(248,32%, 49%);
+    --green: hsl(154, 59%, 51%);
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-#intro {
-    background-image: url(./images/bg-intro-desktop.png);
-    height: 100vh;
-    background-color: hsl(0, 100%, 74%);
+html, body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; 
+    background: var(--red) url(./images/bg-intro-desktop.png) no-repeat center fixed;
+    /* height: 100vh; */
 }
+
+/* #intro {
+} */
+
 
 .intro-text {
     color: #f2ebeb;
 }
 
+.intro-text h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.intro-text p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card {
+    height: 400px;
+    width: 450px;
+    border-radius: 0.5rem;
+}
+
+.blue-btn {
+    width: 450px;
+    border-radius: 0.5rem;
+}
+
+.form-control {
+    font-weight: 600;
+    font-size: 12px;
+    height: 50px;
+}
+.light-text {
+    opacity: 0.5;
+    font-size: 12px;
+}
+
 .neutral-theme {
-    background-color:  hsl(248, 32%, 49%);
+    background-color:  var(--blue);
     color: #fdfcff;
     width: 100%;
+    font-size: 12px;
     box-shadow: 10px 10px 50px 2px rgba(255, 255, 255, 0);
     /* color: hsl(249, 10%, 26); */
     /* color: hsl(246, 25%, 77%); */
 }
 
 .primary-theme {
-    background-color: hsl(154, 59%, 51%);
+    background-color: var(--green);
     color: #f8fff7;
-    width: 90%;
+    font-size: 12px;
+    width: 95%;
     box-shadow: 0px 2px 8px 2px rgba(40, 243, 118, 0.5);
 }
 
 .primary-theme:hover {
     background-color: #77e2b4;
     color:#edfff9;
+}
+
+@media(max-width: 576px) {
+    .intro {
+        text-align: center;
+    }
+   
+    .intro-text h1 {
+        font-size: 2rem;
+        padding: 3rem 0 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .intro-text p{
+        padding: 5px 27px;
+        margin: 10px;
+
+    }
+
+    .blue-btn {
+        width: 88%;
+        height: 95px;
+        padding: 45px 25px! important;
+        margin: 0 50px 20px! important;
+    }
+
+    .neutral-theme {
+        width: 250px;
+        padding: 4rem;
+        margin: 25px;
+    }
+
+    .card {
+        width: 250px;
+        height: 400px;
+        margin:  2.5rem 4.5rem! important
+    }
+
+    .light-text {
+        font-size: 8px;
+    }
+
+    .form-con {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 768px) {
+    .intro-text h1 {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    intro-text p {
+        margin: 2rem;
+        padding: 1.5rem;
+    }
+
+    .form-con {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

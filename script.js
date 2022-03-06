@@ -5,8 +5,9 @@ const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
 const errorElement = document.getElementById('error')
 
-
+errorElement.style.fontSize = "10px"
 errorElement.style.padding = "0.5rem";
+errorElement.style.color = "red"
 
 if (firstName === '') {
     text = "First Name cannot be empty";
@@ -32,7 +33,10 @@ if (email.indexOf("@") == -1 || email.length < 6) {
     return false;
  }
 
- alert("Submitted Successfuly!")
-return true;
+ 
+
+
+//  alert("Submitted Successfuly!")
+// return true;
 }
 
